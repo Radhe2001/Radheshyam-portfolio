@@ -26,7 +26,7 @@ function About() {
 								Who am I ?
 							</h3>
 							<p className="lg:w-[80%] pb-8 text-justify lg:text-lg md:text-md sm:text-sm">
-								I'm a Full Stack Developer adept in crafting
+								I&#39;m a Full Stack Developer adept in crafting
 								robust web and mobile applications using a
 								diverse tech stack, including React, Node.js,
 								Express, Next.js, Django,Android SDK and

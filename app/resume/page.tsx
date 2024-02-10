@@ -40,7 +40,7 @@ function Resume() {
 									2022-2024
 								</h3>
 								<h1 className="text-xl font-semibold mb-1">
-									Master's in Information & Technology
+									Master&#39;s in Information & Technology
 								</h1>
 								<h2 className="text-[#F8BDEB] text-xl mb-1">
 									Lovely Professionla University, Punjab
@@ -51,7 +51,7 @@ function Resume() {
 									2018-2021
 								</h3>
 								<h1 className="text-xl font-semibold mb-1">
-									Bachelor's in History
+									Bachelor&#39;s in History
 								</h1>
 								<h2 className="text-[#F8BDEB] text-xl mb-1">
 									Anugrah Narayan College, Patna
@@ -65,7 +65,7 @@ function Resume() {
 									Higher Secondary
 								</h1>
 								<h2 className="text-[#F8BDEB] text-xl mb-1">
-									Xavier's English School, WB
+									Xavier&#39;s English School, WB
 								</h2>
 							</div>
 						</div>
