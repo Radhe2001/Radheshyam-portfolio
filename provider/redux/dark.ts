@@ -13,5 +13,5 @@ export const changeDarkSliceReducer = createSlice({
 });
 
 export const { setDark } = changeDarkSliceReducer.actions;
-export const darkSelector = (state:any) => state.isLoggedIn;
+export const darkSelector = (state: any) => state.dark;
 export default changeDarkSliceReducer.reducer;

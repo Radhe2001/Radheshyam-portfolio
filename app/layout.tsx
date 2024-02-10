@@ -13,7 +13,6 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const [bgColor, setBgColor] = useState('#191919');
 	return (
 		<Provider store={store}>
 			<html lang="en">
@@ -27,10 +26,10 @@ export default function RootLayout({
 				</head>
 				<body
 					className="h-[100vh] w-[100vw] overflow-x-hidden"
-					style={{ backgroundColor: bgColor }}
+					style={{ backgroundColor: '#191919' }}
 				>
 					<div className="sm:h-[20vh] md:h-[20vh] lg:h-[12vh] lg:mb-[5vh]">
-						<Navbar setBgColor={setBgColor} />
+						<Navbar />
 					</div>
 					<div className="h-[75vh] mb-[5vh]">{children}</div>
 				</body>

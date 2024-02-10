@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { UseSelector, useDispatch, useSelector } from 'react-redux';
 import { setDark, darkSelector } from '../provider/redux/dark';
-function Navbar({ setBgColor }) {
+function Navbar() {
 	const [mobileMenu, setMobileMenu] = useState(false);
 	const [activeLink, setActiveLink] = useState('home');
 	const dark = useSelector((state: any) => state.changeDark.value);
@@ -17,9 +17,11 @@ function Navbar({ setBgColor }) {
 		dispatch(setDark(!dark));
 
 		if (dark) {
-			setBgColor('#C7C8CC');
+			const body = document.querySelector('body') as HTMLBodyElement;
+			body.style.backgroundColor = '#C7C8CC';
 		} else {
-			setBgColor('#191919');
+			const body = document.querySelector('body') as HTMLBodyElement;
+			body.style.backgroundColor = '#191919';
 		}
 	};
 
