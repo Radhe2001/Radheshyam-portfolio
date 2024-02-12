@@ -112,7 +112,7 @@ function Contact() {
 								<div className="flex place-content-center mb-4 mt-4">
 									<input
 										type="text"
-										className="lg:w-[60%] md:w-[80%] sm:w-[80%] lg:h-12 sm:h-16 md:h-16 rounded-xl px-3 placeholder:text-xl placeholder:font-semibold placeholder:text-slate-600 text-xl text-black font-semibold"
+										className="lg:w-[60%] md:w-[80%] sm:w-[80%] lg:h-12 sm:h-16 w-[80%] py-2 md:h-16 rounded-xl px-3 placeholder:text-xl placeholder:font-semibold placeholder:text-slate-600 text-xl text-black font-semibold"
 										placeholder="Name"
 										value={name}
 										onChange={(e) =>
@@ -124,7 +124,7 @@ function Contact() {
 								<div className="flex place-content-center mb-4 mt-4">
 									<input
 										type="email"
-										className="lg:w-[60%] md:w-[80%] sm:w-[80%] lg:h-12 sm:h-16 md:h-16 rounded-xl px-3 placeholder:text-xl placeholder:font-semibold placeholder:text-slate-600 text-xl text-black font-semibold"
+										className="lg:w-[60%] md:w-[80%] sm:w-[80%] lg:h-12 sm:h-16 md:h-16 rounded-xl w-[80%] py-2 px-3 placeholder:text-xl placeholder:font-semibold placeholder:text-slate-600 text-xl text-black font-semibold"
 										placeholder="Email"
 										value={email}
 										onChange={(e) =>
@@ -135,7 +135,7 @@ function Contact() {
 								</div>
 								<div className="flex place-content-center mb-4 mt-4">
 									<textarea
-										className="lg:w-[60%] md:w-[80%] sm:w-[80%] lg:h-12 sm:h-16 md:h-16 rounded-xl px-3 placeholder:text-xl placeholder:font-semibold placeholder:text-slate-600 text-xl text-black font-semibold"
+										className="lg:w-[60%] md:w-[80%] sm:w-[80%] lg:h-12 sm:h-16 md:h-16 rounded-xl w-[80%] py-2 px-3 placeholder:text-xl placeholder:font-semibold placeholder:text-slate-600 text-xl text-black font-semibold"
 										placeholder="Message"
 										value={message}
 										onChange={(e) =>
