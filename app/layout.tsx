@@ -30,7 +30,7 @@ export default function RootLayout({
 						name="keywords"
 						content="portfolio, radhe, radheshyam, Radheshyam, Radhe"
 					></meta>
-					<title>My Portfolio</title>
+					<title>Radheshyam Portfolio</title>
 				</head>
 				<body
 					className="h-[100vh] w-[100vw] overflow-x-hidden"
