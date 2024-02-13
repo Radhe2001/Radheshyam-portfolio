@@ -22,6 +22,8 @@ export default function RootLayout({
 						type="image/x-icon"
 						href="/assets/R.png"
 					></link>
+					<meta name="description" content="This is Radheshyam's portfolio">
+    				<meta name="keywords" content="portfolio, radhe, radheshyam, Radheshyam, Radhe">
 					<title>My Portfolio</title>
 				</head>
 				<body

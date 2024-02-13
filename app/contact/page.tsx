@@ -33,7 +33,7 @@ function Contact() {
 	};
 	return (
 		<>
-			<div className="grid gap-2 mt-4">
+			<div className="grid gap-2 mt-4 overflow-x-hidden">
 				<section
 					className="mx-[5vw] p-[3vw] rounded-3xl"
 					style={{
