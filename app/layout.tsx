@@ -24,7 +24,7 @@ export default function RootLayout({
 					></link>
 					<meta
 						name="description"
-						content="This is Radheshyam's portfolio"
+						content="This is Radheshyam portfolio"
 					></meta>
 					<meta
 						name="keywords"
