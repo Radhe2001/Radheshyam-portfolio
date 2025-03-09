@@ -1,10 +1,26 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { darkSelector } from '../../provider/redux/dark';
 import { useSelector } from 'react-redux';
 
 function Resume() {
 	const dark = useSelector((state: any) => state.changeDark.value);
+	const [certification,setCertification] = useState([
+		{course:"Web Development Bootcamp",institution:"Udemy",time:3},
+		{course:"Django Development Masterclass",institution:"Udemy",time:2},
+		{course:"Java with DSA & System Design",institution:"PWSkills",time:6},
+		{course:"Mobile App Development with Flutter",institution:"Learn Code Online",time:2}
+	])
+	const [skills,setSkills]=useState([
+		{skill:"Dotnet",expertise:80},
+		{skill:"Next.js",expertise:90},
+		{skill:"MERN Stack",expertise:85},
+		{skill:"Angular",expertise:70}
+	])
+	const [knowledges,setKnowledges]= useState(
+		["Next.js","DotNet Web Api","Dotnet Web Form","React.js","Express.js","Angular",
+			"React Native", "Material UI","Tailwind CSS","C#","JavaScript","SignalR",
+			"Microservice", "SQL Server","MySQL"]);
 	return (
 		<>
 			<div className="grid gap-2 mt-4">
@@ -76,7 +92,7 @@ function Resume() {
 								className="h-12 w-12 bg-cover"
 								style={{
 									backgroundImage:
-										'url(/assets/Certification.png)',
+										'url(/assets/certification.png)',
 								}}
 							></div>
 							<h1 className="text-3xl font-semibold">
@@ -84,50 +100,19 @@ function Resume() {
 							</h1>
 						</div>
 						<div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
-							<div className="border-2 border-cyan-700 py-4 px-8 rounded-2xl shadow-xl shadow-black">
-								<h1 className="text-xl font-semibold mb-1">
-									Web Development Bootcamp
-								</h1>
-								<h2 className="text-[#F8BDEB] text-xl mb-1">
-									From Udemy
-								</h2>
-								<h3 className="text-[#99B080] text-lg mb-1 mt-1">
-									03 Moths
-								</h3>
-							</div>
-							<div className="border-2 border-cyan-700 py-4 px-8 rounded-2xl shadow-xl shadow-black">
-								<h1 className="text-xl font-semibold mb-1">
-									Django Development Masterclass
-								</h1>
-								<h2 className="text-[#F8BDEB] text-xl mb-1">
-									From Udemy
-								</h2>
-								<h3 className="text-[#99B080] text-lg mb-1 mt-1">
-									02 Months
-								</h3>
-							</div>
-							<div className="border-2 border-cyan-700 py-4 px-8 rounded-2xl shadow-xl shadow-black">
-								<h1 className="text-xl font-semibold mb-1">
-									Java with DSA & System Design
-								</h1>
-								<h2 className="text-[#F8BDEB] text-xl mb-1">
-									From PWSkills
-								</h2>
-								<h3 className="text-[#99B080] text-lg mb-1 mt-1">
-									06 Months
-								</h3>
-							</div>
-							<div className="border-2 border-cyan-700 py-4 px-8 rounded-2xl shadow-xl shadow-black">
-								<h1 className="text-xl font-semibold mb-1">
-									Mobile App Development with Flutter
-								</h1>
-								<h2 className="text-[#F8BDEB] text-xl mb-1">
-									From Learn Code Online
-								</h2>
-								<h3 className="text-[#99B080] text-lg mb-1 mt-1">
-									02 Months
-								</h3>
-							</div>
+							{certification.map((item,i)=>{
+								return <div className="border-2 border-cyan-700 py-4 px-8 rounded-2xl shadow-xl shadow-black" key={i}>
+											<h1 className="text-xl font-semibold mb-1">
+												{item.course}
+											</h1>
+											<h2 className="text-[#F8BDEB] text-xl mb-1">
+												From {item.institution}
+											</h2>
+											<h3 className="text-[#99B080] text-lg mb-1 mt-1">
+												{"0"+item.time} Months
+											</h3>
+										</div>;
+							})}
 						</div>
 					</div>
 					<div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mt-10 gap-4">
@@ -135,139 +120,37 @@ function Resume() {
 							<h1 className="text-3xl font-semibold">
 								Working Skills
 							</h1>
-							<div className="grid place-items-center w-[90%] ml-[5%] mt-8">
-								<div className="flex w-full mb-2">
-									<h1 className="text-xl font-semibold ">
-										MERN Stack
-									</h1>
-									<h1 className="ml-auto text-xl font-semibold">
-										90%
-									</h1>
-								</div>
-								<div className="h-2 w-full bg-[#D6C7AE] rounded-2xl">
-									<div
-										className="h-2 bg-[#4F4A45] rounded-2xl"
-										style={{ width: '90%' }}
-									></div>
-								</div>
-							</div>
-							<div className="grid place-items-center w-[90%] ml-[5%] mt-4">
-								<div className="flex w-full mb-2">
-									<h1 className="text-xl font-semibold ">
-										Next.js
-									</h1>
-									<h1 className="ml-auto text-xl font-semibold">
-										85%
-									</h1>
-								</div>
-								<div className="h-2 w-full bg-[#D6C7AE] rounded-2xl">
-									<div
-										className="h-2 bg-[#4F4A45] rounded-2xl"
-										style={{ width: '85%' }}
-									></div>
-								</div>
-							</div>
-							<div className="grid place-items-center w-[90%] ml-[5%] mt-8">
-								<div className="flex w-full mb-2">
-									<h1 className="text-xl font-semibold ">
-										Django
-									</h1>
-									<h1 className="ml-auto text-xl font-semibold">
-										90%
-									</h1>
-								</div>
-								<div className="h-2 w-full bg-[#D6C7AE] rounded-2xl">
-									<div
-										className="h-2 bg-[#4F4A45] rounded-2xl"
-										style={{ width: '90%' }}
-									></div>
-								</div>
-							</div>
-							<div className="grid place-items-center w-[90%] ml-[5%] mt-8">
-								<div className="flex w-full mb-2">
-									<h1 className="text-xl font-semibold ">
-										Flutter
-									</h1>
-									<h1 className="ml-auto text-xl font-semibold">
-										70%
-									</h1>
-								</div>
-								<div className="h-2 w-full bg-[#D6C7AE] rounded-2xl">
-									<div
-										className="h-2 bg-[#4F4A45] rounded-2xl"
-										style={{ width: '70%' }}
-									></div>
-								</div>
-							</div>
+							{skills.map((skill,i)=>{
+								return <div className="grid place-items-center w-[90%] ml-[5%] mt-8" key={i}>
+											<div className="flex w-full mb-2">
+												<h1 className="text-xl font-semibold ">
+													{skill.skill} 
+												</h1>
+												<h1 className="ml-auto text-xl font-semibold">
+													{skill.expertise}%
+												</h1>
+											</div>
+											<div className="h-2 w-full bg-[#D6C7AE] rounded-2xl">
+												<div
+													className="h-2 bg-[#4F4A45] rounded-2xl"
+													style={{ width: `${skill.expertise}%` }}
+												></div>
+											</div>
+										</div>
+							})}
+							
 						</div>
 						<div className="">
 							<h1 className="text-3xl font-semibold">
 								Knowledges
 							</h1>
 							<div className="flex flex-wrap gap-2 mt-10 mb-6">
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Express.js
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Node.js
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									React.js
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Next.js
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Django
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Flutter
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									HTML5
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									CSS3
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Tailwind CSS
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Bootstrap
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Javascript
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Python
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Java
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Socket.io
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Mongoose
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									MongoDB
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									MySQL
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									PostgreSQL
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									SQLite
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									AWS EC2
-								</h3>
-								<h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold ">
-									Docker
-								</h3>
+								{knowledges.map((item,i)=>{
+									return <h3 className="text-lg shadow-lg shadow-black text-[#B3A492] px-4 py-2 border-2 border-cyan-700 rounded-xl font-semibold " key={i}>
+												{item}
+											</h3>;
+								})}
+								
 							</div>
 						</div>
 					</div>
