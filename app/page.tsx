@@ -36,7 +36,7 @@ export default function Home() {
 
 	return (
 		<>
-			<main className="w-full h-full flex place-content-center place-items-center">
+			<main className="w-full h-[100vh] flex place-content-center place-items-center">
 				<section>
 					<div
 						className="img-div ml-auto mr-12 border-2 xl:w-[20vw] xl:h-[20vw] lg:w-[25vw] lg:h-[25vw] md:w-[35vw] md:h-[35vw]  w-[45vw] h-[45vw] border-cyan-900 rounded-full  bg-cover "
